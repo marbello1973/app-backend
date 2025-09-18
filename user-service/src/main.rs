@@ -1,6 +1,10 @@
 mod config;
 mod database;
 mod routes;
+mod handler;
+mod service;
+mod models;
+
 pub use database::init_db;
 pub use routes::list_users_get;
 

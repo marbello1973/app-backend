@@ -1,9 +1,8 @@
+
+use crate::handler::root_handler;
+
 use crate::config::server_config;
 use sqlx::PgPool;
-
-async fn root_handler() -> &'static str {
-    "Cambios de todos los usuarios"
-}
 
 async fn users_routes(pool: PgPool) -> Result<(), Box<dyn std::error::Error>> {
     let app = axum::Router::new()
@@ -21,8 +20,3 @@ pub async fn list_users_get(pool: PgPool) {
         tracing::error!("Error al iniciar rutas: {}", error);
     }
 }
-
-
-
-
-

@@ -1,13 +1,18 @@
+pub fn root_model() -> &'static str {
+    "Cambios de todos los usuarios desde model.rs"
+}
+
+/* 
 use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Serialize, Deserialize)]
-struct User {
-    username: String,
-    email: String,
+pub struct User {
+    pub username: String,
+    pub email: String,
 }
 
 impl User {
-    fn new(username: String, email: String, password: String) -> Self {
+    pub fn new(username: String, email: String, password: String) -> Self {
         User { username, email }
     }
 
@@ -74,3 +79,4 @@ impl Create_User {
         self.nit
     }
 }
+*/

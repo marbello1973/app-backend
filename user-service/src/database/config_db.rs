@@ -2,7 +2,7 @@ use dotenvy::dotenv;
 use sqlx::{Error, Executor, Pool, Postgres, postgres::PgPoolOptions};
 use std::env;
 use url::Url;
-
+ 
 /// Configura la base de datos: crea si no existe y devuelve el Pool
 async fn config_database() -> Result<Pool<Postgres>, Error> {
     if !dotenvy::dotenv().is_ok() {
